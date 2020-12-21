@@ -22,3 +22,6 @@ class Patient(TimeStampedModel):
         on_delete=models.CASCADE,
         related_name="created"
     )
+
+    def __str__(self):
+        return self.name
