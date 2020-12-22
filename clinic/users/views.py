@@ -30,7 +30,7 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
         context = super().get_context_data(**kwargs)
         context["created"] = self.request.user.username.created.all()
         return context
-    
+
 
     def get_success_url(self):
         return reverse("users:detail", kwargs={"username": self.request.user.username})
