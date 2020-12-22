@@ -30,6 +30,10 @@
   </div>
 
 </div>
+
+{% for item in object.created.all %}
+<a href="{{ item.get_absolute_url }}">{{ item.name }}</a>
+{% endfor %}
 <!-- End Action buttons -->
 {% endif %}
 
